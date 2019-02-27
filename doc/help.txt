@@ -1,0 +1,145 @@
+
+FADERPORT TOOL MENU 
+
+Reset/Show..........Reset FaderPort and re-initialize MIDI I/O, but don't alter state.
+                    Shows FaderPort emulator, if emulation mode is enabled
+Connect.............Connect FaderPort to Renoise and initialize MIDI I/O
+Disconnect..........Disconnect FaderPort from Renoise and close MIDI I/O
+Auto Connect........Enables/disables automatic FaderPort driver connection after a song is created/loaded. 
+                    If disabled, you have to manually connect (activate) FaderPort driver for each song
+Emulation Mode......Enables/disables emulation mode. If emulation mode is active hardware is inactive !
+Undo Workaround.....Enable/disable undo workaround can also be bound to keyboard shortcut
+Show Device infos...Show/hide FaderPort device Info dialogue
+Show Help...........Show/hide FaderPort  help dialogue
+
+_________________________________________________________________________________________________________
+
+TRANSPORT
+
+Play................Start/stop playing or recording
+Shift+Play..........Start/stop playing from/at position
+Footswitch..........The same as Play (shift and recording also works)
+Stop................Stop playing
+Stop x 2............Panic stop.  All sounds are stopped
+Forward.............Increase position in pattern sequencer
+Rewind..............Decrease position in pattern sequencer
+Shift+Forward.......Jump to song end position
+Shift+Rewind........Jump to song start position
+Record..............Edit mode on/off
+Loop................Pattern loop mode on/off
+Punch...............Block loop mode on/off
+Shift+Punch.........Decrease block loop position
+Shift+User(Swap)....Increase block loop position
+
+_________________________________________________________________________________________________________
+
+APPLICATION
+
+Mix.................Switch middle frame to mixer view
+Proj(Pattern).......Switch middle frame to pattern editor
+Trns(Sample)........Switch middle frame to sample editor. 
+                    Not available if sticky mode support is enabled in preferences !
+Undo................Renoise undo
+Shift+Undo..........Renoise redo
+
+_________________________________________________________________________________________________________
+
+MIXER
+
+Mute................Mute/unmute current track. 
+                    For master track: mutes/umutes all other tracks 
+Solo................Solo/unsolo current track. 
+                    For master track: depends on Renoise solo mode preferences. 
+                    Either mutes/unmutes all other tracks which effectively mutes/unmutes the master 
+                    track, or solos/unsolos all tracks.
+Rec.................Show/hide sample recording dialogue
+Fader...............Change volume this can be either pre-fx volume or post-fx volume. 
+                    Controls swapped: pre-fx pan / post-fx pan. 
+Pan.................Change panning setting Controls swapped: change volume. 
+User(Swap)..........Swap/unswap fader and pan control: fader -> pan pan -> volume
+Shift+Loop..........Display fader/pan binding (Display current binding in status bar)
+Shift+Pan...........Fine trim volume controls swapped: fine trim pan. 
+                    Has no effect if volume/pan is automated.
+Output(Post)........Toggle pre-fx and post-fx mixer  default is pre-fx mixer
+Shift+Output........Select master track
+Channel select L....Select previous track
+Channel select R....Select next track
+Rewind+Forward......Resets volume to default value controls swapped: reset pan to default value. 
+                    Not possible if volume is automated !
+Trns(Sample)........Sticky mode on/off only if sticky mode support is enabled in preferences !
+                    Otherwise middle frame is switched to sample editor.
+Bank(Devices).......Device mode on/off
+
+_________________________________________________________________________________________________________
+
+DEVICES(BANK) 
+
+Fader...............Change parameter1 value 
+Pan.................Change parameter2 value
+User(Swap)..........Swap/unswap fader and pan control: fader -> parameter2 pan ->  parameter1
+Shift+Pan...........Fine trim parameter1 controls swapped: fine trim parameter2
+Shift+Loop..........Display fader/pan binding (Display current binding in status bar)
+Channel select L....Select previous parameter pair. 
+                    Device parameter pairs must be defined in the preferences !
+Channel select R....Select next parameter pair. 
+                    Device parameters pairs must be defined in the preferences !                  
+Rewind+Forward......Reset parameter1 to default value controls. 
+                    If fader and pan are swapped: reset parameter2 to default value. 
+                    Not possible if parameter is automated ! 
+Trns(Sample)........Sticky mode on/off. Only if sticky mode support is enabled in preferences !
+Bank(Devices).......Device mode on/off
+
+_________________________________________________________________________________________________________
+
+FADER AUTOMATION
+
+In order to enable a fader mode an automatable parameter must be bound to fader. This can either 
+be volume/pan or a device parameter.
+
+Read................Read mode on/off read/ follow automation data
+Write...............Latch mode on/off playing mode: automation data is written after replay has been 
+                    started and fader has been touched. Until fader has been touched automation data 
+                    is read. Non-playing mode: if the fader is touched an automation point is 
+                    added/modified at the current edit position. If necessary a new automation envelope 
+                    is created.
+Shift+Write.........Write mode on/off automation data is written immediately after song has been 
+                    started. Has no effect in non-playing mode. 
+                    Touch touch mode on/off playing mode: automation data is written after replay 
+                    has been started and fader has been touched. If fader is untouched/released 
+                    automation data is read. non-playing mode: if the fader is touched an automation point 
+                    is added/modified at the current edit position. If necessary a new automation 
+                    envelope is created. 
+Off.................Switch fader temporarily off as long as off button is pressed, no fader values are sent 
+                    from FaderPort to Renoise. Doesn't switch off any fader modes !
+
+_________________________________________________________________________________________________________
+
+EMULATOR 
+
+In order to emulate pressing two keys at once via mouse click, one have to 
+enable "Emulate hold key". This works only for shift, rwd, fwd, off.  Means: if hold key 
+emulation is enabled clicking e.g. shift with the mouse results in shift being selected. Another 
+click is needed to release shift.
+
+All buttons and controls - especially the fader can be MIDI-mapped to any 3rd party midi 
+controller. Thus, the driver's code can be used by any midi controller.
+
+for fader control mapping only absolute midi map mode is supported. Relative sources are not possible ! 
+For pan control mapping only relative midi map mode is supported. Absolute sources are not possible !
+For all buttons mapping mode "gate on/off" is recommended !
+
+If a 3rd party controller is mapped to fader via midi and absolute midi map mode is used,  automation 
+envelopes should be created using "write" mode only. "touch" mode makes only sense if a relative 
+controller is used. As a workaround one can swap pan and fader control via "user(swap)" key and use mapped 
+3rd party pan controller together with "touch" mode.
+
+_________________________________________________________________________________________________________
+
+ABOUT
+
+FaderPort Renoise driver was created 4irmann 2010-2019.
+Copyright and license: http://www.apache.org/licenses/LICENSE-2.0
+Contact me via Renoise forum.
+
+FaderPort is a trademark of PreSonus Audio Electronics, Inc., registered in the U.S. and other countries.
+Renoise is a trademark of the Renoise authors/company.

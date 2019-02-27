@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RenoiseScriptingTool>
+  <ApiVersion>5.0</ApiVersion>
+  <Id>de.airmann.FaderPort</Id>
+  <Version>1.1</Version>
+  <Name>4irmann's FaderPort Driver</Name>
+  <Author>4irmann [n/a]</Author>
+  <Description>A Renoise driver for Presonus FaderPort DAW controller</Description>
+  <Category>Midi Controllers</Category>
+  <Homepage>https://github.com/4irmann/renoise-faderport-driver</Homepage>
+  <Icon />
+</RenoiseScriptingTool>
