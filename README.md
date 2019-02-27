@@ -3,6 +3,16 @@
 seamlessly into Renoise. Focus is laid on mixing, automation envelope creation, and general DAW control. 
 This tool can seriously improve your workflow and mixing process.
 
+## Installation of latest released version (from xrnx file)
+- download latest xrns archive
+- start Renoise and drag and drop xrnx archive unto Renoise
+
+## Installation of latest version (from source)
+- Locate your personal Renoise tools folder (e.g. for Windows `C:\Users\Mike\AppData\Roaming\Renoise\V3.1.1\Scripts\Tools`, different for MacOS/Linux !!)
+- if not exist already create a new subfolder **de.4irmann.FaderPort.xrnx**
+- if subfolder already exist, remove subfolder and recreate (make backup before and/or save your config.xml)
+- download source tarball as a zip file and unzip into  subfolder **de.4irmann.FaderPort.xrnx**
+
 ## License
 
 Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
