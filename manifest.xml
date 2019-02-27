@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RenoiseScriptingTool>
   <ApiVersion>5.0</ApiVersion>
-  <Id>de.airmann.FaderPort</Id>
+  <Id>de.4irmann.FaderPort</Id>
   <Version>1.1</Version>
   <Name>4irmann's FaderPort Driver</Name>
   <Author>4irmann [n/a]</Author>
