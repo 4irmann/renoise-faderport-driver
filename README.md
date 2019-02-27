@@ -9,8 +9,8 @@ This tool can seriously improve your workflow and mixing process.
 
 ## Installation of latest version (from source)
 - Locate your personal Renoise tools folder (e.g. for Windows `C:\Users\Mike\AppData\Roaming\Renoise\V3.1.1\Scripts\Tools`, different for MacOS/Linux !!)
-- if not exist already create a new subfolder **de.4irmann.FaderPort.xrnx**
-- if subfolder already exist, remove subfolder and recreate (make backup before and/or save your config.xml)
+- if not exists already create a new subfolder **de.4irmann.FaderPort.xrnx**
+- if subfolder already exists, remove subfolder and recreate (make backup before and/or save your config.xml)
 - download source tarball as a zip file and unzip into  subfolder **de.4irmann.FaderPort.xrnx**
 
 ## License
