@@ -7,6 +7,6 @@
   <Author>4irmann [n/a]</Author>
   <Description>A Renoise driver for Presonus FaderPort DAW controller</Description>
   <Category>Midi Controllers</Category>
-  <Homepage>https://github.com/4irmann/renoise-faderport-driver</Homepage>
+  <Homepage>http://github.com/4irmann/renoise-faderport-driver</Homepage>
   <Icon />
 </RenoiseScriptingTool>
